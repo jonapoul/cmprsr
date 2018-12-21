@@ -1,8 +1,12 @@
-#include "config.h"
+#include "global.h"
+#include "Engine.h"
 
 int main() {
 
-   ASSERT(1 == 2);
-
+   char var = 'a';
+   cmprsr::printBinary(sizeof(var), &var);
+   cmprsr::Engine engine;
+   std::string str = engine.read("README.md");
+   PRINT(str);
    return 0;
 }
